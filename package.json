@@ -1,0 +1,22 @@
+{
+  "name": "js_data_structures",
+  "version": "1.0.0",
+  "description": "javascript data structures",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js",
+    "dev": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mreza-dehghani/js_data_structures.git"
+  },
+  "author": "mohammadreza",
+  "license": "ISC"
+}
