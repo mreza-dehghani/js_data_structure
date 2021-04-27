@@ -20,3 +20,4 @@ console.log(list.deleteHead());
 console.log(list.size());
 list.append('this is test message');
 console.log(list.size());
+console.log(list.size());
