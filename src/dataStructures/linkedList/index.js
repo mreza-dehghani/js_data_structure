@@ -1,3 +1,10 @@
+class LinkedListNode {
+	constructor(value, next = null) {
+		this.value = value;
+		this.next = next;
+	}
+}
+
 class LinkedList {
 	constructor() {
 		this.head = null;
@@ -5,7 +12,7 @@ class LinkedList {
 	}
 
 	append(value) {
-		const newElement = { value: value, next: null };
+		const newElement = new LinkedListNode(value);
 
 		if (this.tail) {
 			this.tail.next = newElement;
@@ -17,7 +24,8 @@ class LinkedList {
 	}
 
 	prepend(value) {
-		const newElement = { value: value, next: this.head };
+		const newElement = new LinkedListNode(value, this.head);
+
 		this.head = newElement;
 
 		if (!this.tail) {
@@ -29,7 +37,8 @@ class LinkedList {
 		const existingElement = this.find(afterValue);
 
 		if (existingElement) {
-			const newElement = { value: value, next: existingElement.next };
+			const newElement = new LinkedListNode(value, existingElement.next);
+
 			existingElement.next = newElement;
 		}
 	}
@@ -42,7 +51,7 @@ class LinkedList {
 			return null;
 		}
 
-		const newElement = { value: value, next: existingElement };
+		const newElement = new LinkedListNode(value, existingElement);
 
 		while (currentElement) {
 			if (currentElement.next.value === beforeValue) {
@@ -97,6 +106,7 @@ class LinkedList {
 
 	fromArray(data) {
 		data.forEach(item => this.append(item));
+
 		return this;
 	}
 
@@ -154,17 +164,27 @@ class LinkedList {
 		return this;
 	}
 
-	deleteHead() {
-		if (!this.head) {
-			return null;
-		}
+	deleteTail() {
+		const deletedTail = this.tail;
 
-		if (this.head.next) {
-			this.head = this.head.next;
-		} else {
+		if (this.head === this.tail) {
 			this.head = null;
 			this.tail = null;
+
+			return deletedTail;
 		}
+
+		let currentElement = this.head;
+
+		while (currentElement.next) {
+			if (!currentElement.next.next) {
+				currentElement.next = null;
+			} else {
+				currentElement = currentElement.next;
+			}
+		}
+
+		this.tail = currentElement;
 		return this;
 	}
 
