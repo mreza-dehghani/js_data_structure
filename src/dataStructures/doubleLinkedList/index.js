@@ -52,75 +52,7 @@ class DoubleLinkedList {
 		}
 	}
 
-	// insertBefore(value, beforeValue) {
-	// 	const exitingElement = this.find(beforeValue);
-	// 	const newElement = new DoublyLinkedListNode(value);
-	//
-	// 	newElement.previous = exitingElement.previous;
-	// 	exitingElement.previous = newElement;
-	// 	newElement.next = exitingElement;
-	//
-	// 	if (!newElement.previous) {
-	// 		newElement.previous.next = newElement;
-	// 	} else {
-	// 		this.head = newElement;
-	// 	}
-	//
-	// 	return newElement;
-	// }
-
-	// insertBefore(value, beforeValue) {
-	// 	const exitingElement = this.find(beforeValue);
-	// 	const newElement = new DoublyLinkedListNode(value, exitingElement.next, exitingElement.previous);
-	//
-	// 	if (!this.head) {
-	// 		return null;
-	// 	}
-	//
-	// 	if (exitingElement) {
-	// 		if (exitingElement === this.head) {
-	// 			this.head.previous = newElement;
-	// 			newElement.next = this.head;
-	// 			this.head = newElement;
-	// 		} else if (exitingElement === this.tail) {
-	// 			newElement.previous = this.tail.previous;
-	// 			newElement.next = this.tail;
-	// 			this.head.previous = newElement;
-	// 		} else {
-	// 			newElement.previous = exitingElement.previous;
-	// 			newElement.next = exitingElement;
-	// 			exitingElement.previous = newElement;
-	// 		}
-	//
-	// 		return this;
-	// 	}
-	// }
-
-	// insertBefore(value, beforeValue) {
-	// 	const exitingElement = this.find(beforeValue);
-	// 	let currentElement = this.head;
-	//
-	// 	if (!this.head) {
-	// 		return null;
-	// 	}
-	//
-	// 	const newElement = new DoublyLinkedListNode(value, exitingElement, exitingElement.previous);
-	//
-	// 	if (this.head === exitingElement) {
-	// 		this.head = newElement;
-	// 		this.head.next = exitingElement;
-	// 	} else {
-	// 		while (currentElement) {
-	// 			if (currentElement.next.value === beforeValue) {
-	// 				currentElement.next = newElement;
-	// 				return;
-	// 			}
-	// 			currentElement = currentElement.next;
-	// 		}
-	// 	}
-	// }
-
-	insertBefore(value, beforeValue) {}
+	// insertBefore(value, beforeValue) {}
 
 	find(value) {
 		if (!this.head) {
@@ -288,4 +220,4 @@ class DoubleLinkedList {
 	}
 }
 
-module.exports = { DoubleLinkedList };
+module.exports = DoubleLinkedList;

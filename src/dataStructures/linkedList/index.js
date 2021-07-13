@@ -161,7 +161,7 @@ class LinkedList {
 			this.head = null;
 			this.tail = null;
 		}
-		return this;
+		return this.head;
 	}
 
 	deleteTail() {
@@ -205,4 +205,4 @@ class LinkedList {
 	}
 }
 
-module.exports = { LinkedList };
+module.exports = LinkedList;
