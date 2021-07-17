@@ -1,6 +1,6 @@
-const LinkedList = require('../linkedList');
+const LinkedList = require('../LinkedList');
 
-class LinkedListStack {
+class StackLinkedList {
 	constructor() {
 		this.items = new LinkedList();
 	}
@@ -18,4 +18,4 @@ class LinkedListStack {
 	}
 }
 
-module.exports = LinkedListStack;
+module.exports = StackLinkedList;

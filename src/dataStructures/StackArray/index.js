@@ -1,4 +1,4 @@
-class ArrayStack {
+class StackArray {
 	constructor() {
 		this.items = [];
 	}
@@ -16,4 +16,4 @@ class ArrayStack {
 	}
 }
 
-module.exports = ArrayStack;
+module.exports = StackArray;

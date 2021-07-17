@@ -1,8 +1,13 @@
-const LinkedList = require('./dataStructures/linkedList');
-const DoubleLinkedList = require('./dataStructures/doubleLinkedList');
-const ArrayStack = require('./dataStructures/arrayStack');
-const LinkedListStack = require('./dataStructures/linkedListStack');
-const QueueArray = require('./dataStructures/arrayQueue');
-const QueueLinkedList = require('./dataStructures/linkedListQueue');
+const LinkedList = require('./dataStructures/LinkedList');
+const DoubleLinkedList = require('./dataStructures/DoubleLinkedList');
+const StackArray = require('./dataStructures/StackArray');
+const StackLinkedList = require('./dataStructures/StackLinkedList');
+const QueueArray = require('./dataStructures/QueueArray');
+const QueueLinkedList = require('./dataStructures/QueueLinkedList');
 
-const list = new QueueLinkedList();
+const linkedList = new LinkedList();
+const doubleLinkedList = new DoubleLinkedList();
+const stackArray = new StackArray();
+const stackLinkedList = new StackLinkedList();
+const queueArray = new QueueArray();
+const queueLinkedList = new QueueLinkedList();
