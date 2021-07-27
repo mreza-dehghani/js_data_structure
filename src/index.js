@@ -5,6 +5,7 @@ const StackLinkedList = require('./dataStructures/StackLinkedList');
 const QueueArray = require('./dataStructures/QueueArray');
 const QueueLinkedList = require('./dataStructures/QueueLinkedList');
 const HashTable = require('./dataStructures/HashTable');
+const Tree = require('./dataStructures/Tree');
 
 const linkedList = new LinkedList();
 const doubleLinkedList = new DoubleLinkedList();
@@ -13,6 +14,7 @@ const stackLinkedList = new StackLinkedList();
 const queueArray = new QueueArray();
 const queueLinkedList = new QueueLinkedList();
 const hashTable = new HashTable(1000);
+const tree = new Tree('root');
 
 // const message = 'hello world';
 //
