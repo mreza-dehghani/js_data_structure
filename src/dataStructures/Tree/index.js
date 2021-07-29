@@ -63,6 +63,52 @@ class Node {
 			existingNodeChild.removeNode(segments.slice(1).join('/'));
 		}
 	}
+
+	find(value) {
+		for (const item of this.children) {
+			if (item.value === value) {
+				return item;
+			}
+
+			const nestedChildNode = item.find(value);
+
+			if (nestedChildNode) {
+				return nestedChildNode;
+			}
+		}
+	}
+
+	//	depth-first-search
+	depthSearch(value) {
+		for (const item of this.children) {
+			if (item.value === value) {
+				return item;
+			}
+
+			const nestedChildNode = item.find(value);
+
+			if (nestedChildNode) {
+				return nestedChildNode;
+			}
+		}
+	}
+
+	//	breadth-first-search
+	BreadthSearch(value) {
+		for (const item of this.children) {
+			if (item.value === value) {
+				return item;
+			}
+		}
+
+		for (const item of this.children) {
+			const nestedChildNode = item.find(value);
+
+			if (nestedChildNode) {
+				return nestedChildNode;
+			}
+		}
+	}
 }
 
 class Tree {
@@ -76,6 +122,14 @@ class Tree {
 
 	remove(path) {
 		this.root.removeNode(path);
+	}
+
+	find(value) {
+		if (this.root.value === value) {
+			return this.root;
+		}
+
+		return this.root.find(value);
 	}
 }
 
