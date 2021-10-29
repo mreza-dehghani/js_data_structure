@@ -25,6 +25,12 @@ class HashTable {
 
 		return this.items[keyHash];
 	}
+
+	hasProperty(key) {
+		const exitingNode = this.get(key);
+
+		return !!exitingNode;
+	}
 }
 
 module.exports = HashTable;

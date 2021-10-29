@@ -64,6 +64,8 @@ class Node {
 		}
 	}
 
+	// todo: add flag to search value in node and find item...
+
 	find(value) {
 		for (const item of this.children) {
 			if (item.value === value) {
@@ -78,37 +80,21 @@ class Node {
 		}
 	}
 
-	//	depth-first-search
-	depthSearch(value) {
-		for (const item of this.children) {
-			if (item.value === value) {
-				return item;
-			}
-
-			const nestedChildNode = item.find(value);
-
-			if (nestedChildNode) {
-				return nestedChildNode;
-			}
-		}
-	}
-
-	//	breadth-first-search
-	BreadthSearch(value) {
-		for (const item of this.children) {
-			if (item.value === value) {
-				return item;
-			}
-		}
-
-		for (const item of this.children) {
-			const nestedChildNode = item.find(value);
-
-			if (nestedChildNode) {
-				return nestedChildNode;
-			}
-		}
-	}
+	// find(value) {
+	// 	for (const item of this.children) {
+	// 		if (item.value === value) {
+	// 			return item;
+	// 		}
+	// 	}
+	//
+	// 	for (const item of this.children) {
+	// 		const nestedChildNode = item.BreadthSearch(value);
+	//
+	// 		if (nestedChildNode) {
+	// 			return nestedChildNode;
+	// 		}
+	// 	}
+	// }
 }
 
 class Tree {
